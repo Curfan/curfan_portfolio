@@ -6,8 +6,9 @@ import styles from './index.css';
 
 const Header = () => (
 	<header className={styles.header}>
-		<h2>This is header</h2>
+		<h2>C</h2>
 		<Navigation />
+		<div>time</div>
 	</header>
 );
 

@@ -5,24 +5,19 @@ import { Provider } from 'react-redux';
 
 import App from 'layouts/App';
 
-import MembersRoute from './Members';
-import BlogsRoute from './Blogs';
+import PortfolioRoute from './Portfolio';
+import AboutRoute from './About';
 
 const createRoutes = store => ({
 	path: '/',
 	component: App,
 	indexRoute: {
-		getComponent: (nextState, cb) =>
-			require.ensure(
-				[],
-				require => {
-					const component = require('./Home').default;
-					cb(null, component);
-				},
-				'Home',
-			),
+		component: null,
+		onEnter: (_, replace) => {
+			replace('/portfolio');
+		},
 	},
-	childRoutes: [MembersRoute(store), BlogsRoute(store)],
+	childRoutes: [PortfolioRoute(store), AboutRoute(store)],
 });
 
 const Routes = ({ store, history }) => (

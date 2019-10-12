@@ -1,12 +1,10 @@
 .header {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
 	width: 100%;
-	color: var(--secondary);
-	background-color: var(--standard);
-	padding: 10px 0;
-
-	@media screen and (--phone), screen and (--tablet) {
-		& {
-			color: white;
-		}
-	}
+	padding: 20px 50px;
+	color: white;
+	background-color: transparent;
+	z-index: 300;
 }
