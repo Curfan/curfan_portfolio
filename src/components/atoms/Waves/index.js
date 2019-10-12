@@ -39,7 +39,7 @@ const Waves = ({ className }) => {
 					ctx.lineTo(x, startY + amp * y);
 				}
 				const alpha = Math.min(Math.abs(y), 0.8) + 0.1;
-				ctx.strokeStyle = `rgba(80,210,240,${alpha})`;
+				ctx.strokeStyle = `rgba(41,45,55,${alpha})`;
 				ctx.stroke();
 				ctx.closePath();
 
