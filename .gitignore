@@ -9,3 +9,5 @@ _public/*
 # test
 coverage/*
 .jest-test-results.json
+
+.DS_Store
