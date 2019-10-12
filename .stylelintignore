@@ -8,5 +8,6 @@ _public/*
 **/*.jpg
 **/*.png
 **/*.svg
+**/*.gif
 .*
 **/*.md
