@@ -3,19 +3,23 @@ import classnames from 'classnames';
 import { Link } from 'react-router';
 
 import { useReactRouter } from 'models/route';
+import { useLanguage } from 'models/i18n';
 
 import styles from './index.css';
 
 const Navigation = () => {
-	const [{ pathname }] = useReactRouter();
+	const [{ pathnameWithoutLang }] = useReactRouter();
+	const [{ routeLang }] = useLanguage();
 
 	return (
 		<nav className={styles.navigation}>
 			<ul>
 				<li>
 					<Link
-						className={classnames(styles.item, { [styles.active]: pathname === '/portfolio' })}
-						to="/portfolio"
+						className={classnames(styles.item, {
+							[styles.active]: pathnameWithoutLang === 'portfolio',
+						})}
+						to={`/${routeLang}/portfolio`}
 					>
 						<div className={styles.icon} />
 						<span className={styles.label}>Portfolio</span>
@@ -23,8 +27,10 @@ const Navigation = () => {
 				</li>
 				<li>
 					<Link
-						className={classnames(styles.item, { [styles.active]: pathname === '/about' })}
-						to="/about"
+						className={classnames(styles.item, {
+							[styles.active]: pathnameWithoutLang === 'about',
+						})}
+						to={`/${routeLang}/about`}
 					>
 						<div className={styles.icon} />
 						<span className={styles.label}>About</span>
@@ -36,9 +42,9 @@ const Navigation = () => {
 					</div>
 				</li>
 				<li>
-					<div className={classnames(styles.item)}>
+					<Link className={classnames(styles.item)} to={`/${routeLang}/`}>
 						<div className={styles.icon} />
-					</div>
+					</Link>
 				</li>
 			</ul>
 		</nav>

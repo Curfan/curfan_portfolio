@@ -3,6 +3,8 @@ import { hot } from 'react-hot-loader/root';
 
 import { SectionsContainer, Section } from 'react-fullpage';
 
+import Page from 'layouts/Page';
+
 import styles from './index.css';
 
 const About = () => {
@@ -37,4 +39,4 @@ const About = () => {
 	);
 };
 
-export default hot(About);
+export default hot(Page({ Content: About }));

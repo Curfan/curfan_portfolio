@@ -1,14 +1,12 @@
 import React from 'react';
 
-import styles from './index.css';
+import Header from 'components/organisms/Header';
 
-const PageLayout = ({ PageHeader, PageContent }) => props => (
-	<div className={styles.page}>
-		<header>{PageHeader}</header>
-		<div>
-			<PageContent {...props} />
-		</div>
-	</div>
+const PageLayout = ({ Content }) => () => (
+	<>
+		<Header />
+		<Content />
+	</>
 );
 
 export default PageLayout;

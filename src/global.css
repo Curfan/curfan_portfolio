@@ -10,6 +10,8 @@
 body {
 	margin: 0;
 	overflow-x: hidden;
+	background: #1e222b;
+	color: white;
 }
 
 a {

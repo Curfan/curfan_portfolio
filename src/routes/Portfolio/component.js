@@ -3,6 +3,8 @@ import { hot } from 'react-hot-loader/root';
 
 import { SectionsContainer, Section } from 'react-fullpage';
 
+import Page from 'layouts/Page';
+
 import styles from './index.css';
 
 const Portfolio = () => {
@@ -37,4 +39,4 @@ const Portfolio = () => {
 	);
 };
 
-export default hot(Portfolio);
+export default hot(Page({ Content: Portfolio }));
