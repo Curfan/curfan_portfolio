@@ -7,7 +7,7 @@ export const HOST_MAP = {
 const SELF_HOST_MAP = {
 	dev: 'http://localhost:3000',
 	demo: '',
-	production: '',
+	production: 'https://curfan.github.io/curfan_portfolio',
 };
 
 export const API_ENDPOINT = HOST_MAP[process.env.API];

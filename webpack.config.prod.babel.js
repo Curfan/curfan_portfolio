@@ -65,7 +65,7 @@ const webpackProdConfig = {
 		path: path.join(__dirname, '_public'),
 		filename: '[name].[chunkhash].js',
 		chunkFilename: '[name].[chunkhash].chunk.js',
-		publicPath: '/',
+		publicPath: '',
 	},
 	plugins: [
 		new webpack.DefinePlugin({
