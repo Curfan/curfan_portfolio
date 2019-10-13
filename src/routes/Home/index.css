@@ -1,16 +1,43 @@
 .home {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	width: 250px;
-	height: 250px;
-	border-radius: 100px;
-	color: var(--yellow);
-	background-color: var(--tangerine);
-	margin: 0 auto;
-	margin-top: 200px;
-	margin-bottom: 200px;
-	line-height: 32px;
-	font-weight: 300;
-	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	height: 100vh;
+
+	& > .waves {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	& > .container {
+		z-index: 10;
+
+		& > .title {
+			font-size: 54px;
+			line-height: 66px;
+			letter-spacing: 0;
+			opacity: 0;
+			text-align: center;
+			margin-bottom: 26px;
+		}
+
+		& > .description {
+			font-size: 24px;
+			line-height: 29px;
+			letter-spacing: 0.15em;
+			text-align: center;
+			opacity: 0.5;
+		}
+	}
+
+	& > .hint {
+		z-index: 20;
+		position: absolute;
+		bottom: 100px;
+		text-align: center;
+		opacity: 0.5;
+	}
 }
