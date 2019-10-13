@@ -3,6 +3,7 @@ import 'whatwg-fetch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { I18nextProvider } from 'react-i18next';
+import { browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 // A modern alternative to CSS resets
@@ -14,7 +15,6 @@ import { initi18next } from 'util/i18n';
 import { detectLocalStorageSupport } from 'util/storage';
 
 import configureStore from './store';
-import { browserHistory } from './store/history';
 import Routes from './routes';
 
 const store = configureStore({});

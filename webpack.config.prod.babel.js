@@ -65,7 +65,7 @@ const webpackProdConfig = {
 		path: path.join(__dirname, '_public'),
 		filename: '[name].[chunkhash].js',
 		chunkFilename: '[name].[chunkhash].chunk.js',
-		publicPath: '',
+		publicPath: '/curfan_portfolio/',
 	},
 	plugins: [
 		new webpack.DefinePlugin({
@@ -90,6 +90,27 @@ const webpackProdConfig = {
 			inject: true,
 			showErrors: false,
 			filename: 'index.html',
+			chunksSortMode: 'dependency',
+		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+			minify: {
+				removeComments: true,
+				collapseWhitespace: true,
+				removeRedundantAttributes: true,
+				useShortDoctype: true,
+				removeEmptyAttributes: true,
+				removeStyleLinkTypeAttributes: true,
+				removeScriptTypeAttributes: true,
+				keepClosingSlash: true,
+				minifyJS: true,
+				minifyCSS: true,
+				minifyURLs: true,
+			},
+			inject: true,
+			showErrors: false,
+			filename: '404.html',
 			chunksSortMode: 'dependency',
 		}),
 

@@ -20,7 +20,7 @@ const Home = () => {
 
 	useEffect(() => {
 		if (keyPress) {
-			replace(`/${routeLang}/portfolio`);
+			replace(`/curfan_portfolio/${routeLang}/portfolio`);
 		}
 	}, [keyPress]);
 

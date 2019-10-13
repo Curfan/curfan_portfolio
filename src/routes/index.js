@@ -11,7 +11,7 @@ import PortfolioRoute from './Portfolio';
 import AboutRoute from './About';
 
 const createRoutes = store => ({
-	path: '/',
+	path: '/curfan_portfolio/',
 	component: App,
 	indexRoute: {
 		component: null,
@@ -20,7 +20,7 @@ const createRoutes = store => ({
 				i18n: { lang },
 			} = store.getState();
 
-			replace(`/${languageMapRoute(lang)}/`);
+			replace(`/curfan_portfolio/${languageMapRoute(lang)}/`);
 
 			callback();
 		},
@@ -45,7 +45,7 @@ const createRoutes = store => ({
 				} = store.getState();
 
 				if (!isLanguageSupportWithRoute(urlLang)) {
-					replace(`/${languageMapRoute(lang)}/${pathname.split('/')[2]}`);
+					replace(`/curfan_portfolio/${languageMapRoute(lang)}/${pathname.split('/')[2]}`);
 				}
 
 				callback();
@@ -60,7 +60,7 @@ const createRoutes = store => ({
 						component: null,
 						onEnter: () => {},
 					},
-					onEnter: (_, replace) => replace('/'),
+					onEnter: (_, replace) => replace('/curfan_portfolio/'),
 				},
 			],
 		},
@@ -75,7 +75,7 @@ const createRoutes = store => ({
 				const {
 					i18n: { lang },
 				} = store.getState();
-				replace(`/${languageMapRoute(lang)}${pathname}`);
+				replace(`/curfan_portfolio/${languageMapRoute(lang)}${pathname}`);
 			},
 		},
 	],

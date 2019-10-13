@@ -2,11 +2,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk-fsa';
+import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 
 import reducers from 'models/reducers';
-
-import { browserHistory } from './history';
 
 const reduxRouterMiddleware = routerMiddleware(browserHistory);
 

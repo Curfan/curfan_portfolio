@@ -19,7 +19,7 @@ const Navigation = () => {
 						className={classnames(styles.item, {
 							[styles.active]: pathnameWithoutLang === 'portfolio',
 						})}
-						to={`/${routeLang}/portfolio`}
+						to={`/curfan_portfolio/${routeLang}/portfolio`}
 					>
 						<div className={styles.icon} />
 						<span className={styles.label}>Portfolio</span>
@@ -30,7 +30,7 @@ const Navigation = () => {
 						className={classnames(styles.item, {
 							[styles.active]: pathnameWithoutLang === 'about',
 						})}
-						to={`/${routeLang}/about`}
+						to={`/curfan_portfolio/${routeLang}/about`}
 					>
 						<div className={styles.icon} />
 						<span className={styles.label}>About</span>
@@ -42,7 +42,7 @@ const Navigation = () => {
 					</div>
 				</li>
 				<li>
-					<Link className={classnames(styles.item)} to={`/${routeLang}/`}>
+					<Link className={classnames(styles.item)} to={`/curfan_portfolio/${routeLang}/`}>
 						<div className={styles.icon} />
 					</Link>
 				</li>
