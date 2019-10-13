@@ -12,7 +12,8 @@ const Waves = ({ className }) => {
 	useEffect(() => {
 		const canvas = canvasRef.current;
 		const ctx = canvas.getContext('2d');
-		const perlin = new ClassicalNoise();
+		const perlin = {};
+		perlin.instance = new ClassicalNoise();
 
 		const variation = 0.003;
 		const amp = 200;
@@ -26,34 +27,40 @@ const Waves = ({ className }) => {
 			variators[i] = u;
 		}
 
-		function draw() {
+		const draw = () => {
 			ctx.shadowColor = 'rgba(43, 205, 255, 1)';
 			ctx.shadowBlur = 0;
 
-			for (let i = 0; i <= maxLines; i += 1) {
-				ctx.beginPath();
-				ctx.moveTo(0, startY);
-				let y;
-				for (let x = 0; x <= canvasWidth; x += 1) {
-					y = perlin.noise(x * variation + variators[i], x * variation, 0);
-					ctx.lineTo(x, startY + amp * y);
+			try {
+				if (perlin.instance) {
+					for (let i = 0; i <= maxLines; i += 1) {
+						ctx.beginPath();
+						ctx.moveTo(0, startY);
+						let y;
+						for (let x = 0; x <= canvasWidth; x += 1) {
+							y = perlin.instance.noise(x * variation + variators[i], x * variation, 0);
+							ctx.lineTo(x, startY + amp * y);
+						}
+						const alpha = Math.min(Math.abs(y), 0.8) + 0.1;
+						ctx.strokeStyle = `rgba(41,45,55,${alpha})`;
+						ctx.stroke();
+						ctx.closePath();
+
+						variators[i] += 0.005;
+					}
 				}
-				const alpha = Math.min(Math.abs(y), 0.8) + 0.1;
-				ctx.strokeStyle = `rgba(41,45,55,${alpha})`;
-				ctx.stroke();
-				ctx.closePath();
-
-				variators[i] += 0.005;
+			} catch (err) {
+				console.log(err);
 			}
-		}
+		};
 
-		function animate() {
+		const animate = () => {
 			ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 			draw();
 			requestAnimationFrame(animate);
-		}
+		};
 
-		function resizeCanvas() {
+		const resizeCanvas = () => {
 			const { clientWidth, clientHeight } = document.documentElement;
 			canvasWidth = clientWidth;
 			canvasHeight = clientHeight;
@@ -62,14 +69,17 @@ const Waves = ({ className }) => {
 			canvas.setAttribute('height', canvasHeight);
 
 			startY = canvasHeight / 2;
-		}
+		};
 
-		(function init() {
-			resizeCanvas();
-			animate();
-			window.addEventListener('resize', resizeCanvas);
-		})();
-	});
+		resizeCanvas();
+		animate();
+		window.addEventListener('resize', resizeCanvas);
+
+		return () => {
+			delete perlin.instance;
+			window.removeEventListener('resize', resizeCanvas);
+		};
+	}, []);
 
 	return <canvas ref={canvasRef} className={classnames(styles.waves, className)} />;
 };
