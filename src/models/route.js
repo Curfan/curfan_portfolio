@@ -8,7 +8,7 @@ const selectReactRouter = createSelector(
 	location => ({
 		...location,
 		pathnameWithoutLang:
-			location.pathname.split('/').length >= 4 ? location.pathname.split('/')[3] : '',
+			location.pathname.split('/').length >= 3 ? location.pathname.split('/')[2] : '',
 	}),
 );
 
