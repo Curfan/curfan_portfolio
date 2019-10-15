@@ -7,6 +7,7 @@ import { useReactRouter } from 'models/route';
 import { useLanguage } from 'models/i18n';
 import { useKeyPress } from 'util/event';
 
+import LottieLogo from 'components/atoms/LottieLogo';
 import Waves from 'components/atoms/Waves';
 
 import styles from './index.css';
@@ -24,6 +25,17 @@ const Home = () => {
 		}
 	}, [keyPress]);
 
+	const logoRef = useRef();
+	const logoProps = useSpring({
+		ref: logoRef,
+		from: { opacity: 0 },
+		to: async next => {
+			await next({ opacity: 1 });
+			await next({ opacity: 0 });
+		},
+		config: { ...config.molasses, duration: 1900 },
+	});
+
 	const titleRef = useRef();
 	const titleProps = useSpring({
 		ref: titleRef,
@@ -32,7 +44,7 @@ const Home = () => {
 			await next({ opacity: 1, letterSpacing: 0 });
 			await next({ opacity: 1, letterSpacing: 10 });
 		},
-		config: config.molasses,
+		config: { ...config.molasses, duration: 2000 },
 	});
 
 	const descriptioneRef = useRef();
@@ -40,7 +52,7 @@ const Home = () => {
 		ref: descriptioneRef,
 		from: { opacity: 0 },
 		to: { opacity: 1 },
-		config: config.stiff,
+		config: { ...config.molasses, duration: 2000 },
 	});
 
 	const hintRef = useRef();
@@ -48,13 +60,16 @@ const Home = () => {
 		ref: hintRef,
 		from: { opacity: 0 },
 		to: { opacity: 0.5 },
-		config: config.stiff,
+		config: { ...config.molasses, duration: 2000 },
 	});
 
-	useChain([titleRef, descriptioneRef, hintRef], [2, 6, 7]);
+	useChain([logoRef, titleRef, descriptioneRef, hintRef], [0, 5, 9, 10]);
 
 	return (
 		<div className={styles.home}>
+			<animated.div className={styles.logo} style={logoProps}>
+				<LottieLogo />
+			</animated.div>
 			<div className={styles.container}>
 				<animated.div className={styles.title} style={titleProps}>
 					{t('title')}
