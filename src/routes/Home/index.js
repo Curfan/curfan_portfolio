@@ -29,10 +29,7 @@ const Home = () => {
 	const logoProps = useSpring({
 		ref: logoRef,
 		from: { opacity: 0 },
-		to: async next => {
-			await next({ opacity: 1 });
-			await next({ opacity: 0 });
-		},
+		to: [{ opacity: 1 }, { opacity: 0 }],
 		config: { ...config.molasses, duration: 1900 },
 	});
 
@@ -40,11 +37,8 @@ const Home = () => {
 	const titleProps = useSpring({
 		ref: titleRef,
 		from: { opacity: 0, letterSpacing: 0 },
-		to: async next => {
-			await next({ opacity: 1, letterSpacing: 0 });
-			await next({ opacity: 1, letterSpacing: 10 });
-		},
-		config: { ...config.molasses, duration: 2000 },
+		to: [{ opacity: 1, letterSpacing: 0 }, { opacity: 1, letterSpacing: 10 }],
+		config: { ...config.molasses, duration: 1200 },
 	});
 
 	const descriptioneRef = useRef();
@@ -52,7 +46,7 @@ const Home = () => {
 		ref: descriptioneRef,
 		from: { opacity: 0 },
 		to: { opacity: 1 },
-		config: { ...config.molasses, duration: 2000 },
+		config: { ...config.molasses, duration: 1200 },
 	});
 
 	const hintRef = useRef();
@@ -60,10 +54,10 @@ const Home = () => {
 		ref: hintRef,
 		from: { opacity: 0 },
 		to: { opacity: 0.5 },
-		config: { ...config.molasses, duration: 2000 },
+		config: { ...config.molasses, duration: 1200 },
 	});
 
-	useChain([logoRef, titleRef, descriptioneRef, hintRef], [0, 5, 9, 10]);
+	useChain([logoRef, titleRef, descriptioneRef, hintRef], [0, 5, 8, 9]);
 
 	return (
 		<div className={styles.home}>
