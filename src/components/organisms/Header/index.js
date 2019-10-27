@@ -4,6 +4,8 @@ import { useNewTimer } from 'util/timer';
 
 import Navigation from 'components/molecules/Navigation';
 
+import IconLogo from 'images/icon/logo.inline.svg';
+
 import styles from './index.css';
 
 const Header = () => {
@@ -11,7 +13,7 @@ const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			<h2>C</h2>
+			<IconLogo />
 			<Navigation />
 			<div className={styles.timer}>{timer}</div>
 		</header>
