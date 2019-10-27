@@ -52,7 +52,7 @@ const Navigation = () => {
 						onClick={() => changeRouteByLanguage(MAPPING_SWITCH_LANGUAGE[lang])}
 					>
 						<div className={styles.icon}>
-							<span>{mapLanguageName(MAPPING_SWITCH_LANGUAGE[lang])}</span>
+							<span className={styles.text}>{mapLanguageName(MAPPING_SWITCH_LANGUAGE[lang])}</span>
 						</div>
 					</Link>
 				</li>

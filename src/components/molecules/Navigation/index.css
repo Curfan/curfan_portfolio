@@ -21,9 +21,10 @@
 					margin-bottom: 10px;
 					transition: all 0.3s ease-in;
 
-					& > svg {
-						transition: opacity 0.3s ease-in;
-						opacity: 0.2;
+					& > .text {
+						font-size: 12px;
+						line-height: 14px;
+						letter-spacing: 0.1em;
 					}
 				}
 
@@ -37,10 +38,6 @@
 				&.active {
 					& > .icon {
 						border: 1px solid white;
-
-						& > svg {
-							opacity: 1;
-						}
 					}
 
 					& > .label {
