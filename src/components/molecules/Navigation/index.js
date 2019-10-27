@@ -19,7 +19,7 @@ const Navigation = () => {
 						className={classnames(styles.item, {
 							[styles.active]: pathnameWithoutLang === 'portfolio',
 						})}
-						to={`/${routeLang}/portfolio`}
+						to={`/${routeLang}/portfolio#01`}
 					>
 						<div className={styles.icon} />
 						<span className={styles.label}>Portfolio</span>
@@ -30,7 +30,7 @@ const Navigation = () => {
 						className={classnames(styles.item, {
 							[styles.active]: pathnameWithoutLang === 'about',
 						})}
-						to={`/${routeLang}/about`}
+						to={`/${routeLang}/about#01`}
 					>
 						<div className={styles.icon} />
 						<span className={styles.label}>About</span>

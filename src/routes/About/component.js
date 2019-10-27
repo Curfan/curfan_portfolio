@@ -1,5 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
+import classnames from 'classnames';
 
 import { SectionsContainer, Section } from 'react-fullpage';
 
@@ -7,9 +8,9 @@ import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-const About = () => {
-	const anchors = ['01', '02', '03'];
+const anchors = ['01', '02', '03'];
 
+const About = ({ className }) => {
 	const options = {
 		sectionClassName: 'section',
 		anchors,
@@ -21,15 +22,7 @@ const About = () => {
 	};
 
 	return (
-		<div className={styles.about}>
-			<div className={styles.navigationBar}>
-				{anchors.map(item => (
-					<a key={item} href={`#${item}`} className={styles.item}>
-						<span className={styles.label}>{item}</span>
-						<span className={styles.bar} />
-					</a>
-				))}
-			</div>
+		<div className={classnames(styles.about, className)}>
 			<SectionsContainer className={styles.sectionContainer} {...options}>
 				<Section>About me</Section>
 				<Section>Curfan</Section>
@@ -39,4 +32,4 @@ const About = () => {
 	);
 };
 
-export default hot(Page({ Content: About }));
+export default hot(Page({ Content: About, anchors }));

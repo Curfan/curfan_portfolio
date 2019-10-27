@@ -1,0 +1,47 @@
+.side-nav {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+
+	& > .item {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		& > .label {
+			margin-right: 7px;
+			color: white;
+			font-size: 14px;
+			line-height: 19px;
+			letter-spacing: 0.05em;
+			transition: opacity 0.3s ease-in;
+			opacity: 0;
+		}
+
+		& > .bar {
+			display: flex;
+			width: 33px;
+			border: 2px solid #565656;
+			transition: all 0.3s ease-in;
+		}
+
+		&:global(.active) {
+			& > .label {
+				opacity: 1;
+			}
+
+			& > .bar {
+				border: 2px solid white;
+				width: 67px;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
