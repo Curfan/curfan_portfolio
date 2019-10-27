@@ -11,12 +11,20 @@
 				cursor: pointer;
 
 				& > .icon {
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					width: 50px;
 					height: 50px;
 					border: 1px solid #494949;
 					border-radius: 50%;
 					margin-bottom: 10px;
 					transition: all 0.3s ease-in;
+
+					& > svg {
+						transition: opacity 0.3s ease-in;
+						opacity: 0.2;
+					}
 				}
 
 				& > .label {
@@ -29,6 +37,10 @@
 				&.active {
 					& > .icon {
 						border: 1px solid white;
+
+						& > svg {
+							opacity: 1;
+						}
 					}
 
 					& > .label {
