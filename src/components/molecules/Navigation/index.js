@@ -5,6 +5,8 @@ import { Link } from 'react-router';
 import { useReactRouter } from 'models/route';
 import { useLanguage } from 'models/i18n';
 
+import { mapLanguageName, MAPPING_SWITCH_LANGUAGE } from 'util/i18n';
+
 import IconSuitcase from 'images/icon/suitcase.inline.svg';
 import IconMember from 'images/icon/member.inline.svg';
 import IconPower from 'images/icon/power.inline.svg';
@@ -13,7 +15,7 @@ import styles from './index.css';
 
 const Navigation = () => {
 	const [{ pathnameWithoutLang }] = useReactRouter();
-	const [{ routeLang }] = useLanguage();
+	const [{ lang, routeLang }, { changeRouteByLanguage }] = useLanguage();
 
 	return (
 		<nav className={styles.navigation}>
@@ -45,9 +47,14 @@ const Navigation = () => {
 					</Link>
 				</li>
 				<li>
-					<div className={classnames(styles.item)}>
-						<div className={styles.icon} />
-					</div>
+					<Link
+						className={styles.item}
+						onClick={() => changeRouteByLanguage(MAPPING_SWITCH_LANGUAGE[lang])}
+					>
+						<div className={styles.icon}>
+							<span>{mapLanguageName(MAPPING_SWITCH_LANGUAGE[lang])}</span>
+						</div>
+					</Link>
 				</li>
 				<li>
 					<Link className={classnames(styles.item)} to={`/${routeLang}/`}>

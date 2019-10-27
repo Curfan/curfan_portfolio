@@ -8,4 +8,7 @@ export default {
 		text2: 'Welcome to my portfolio website',
 		press: 'Press Anything to Continue',
 	},
+	portfolio: {
+		page1: 'Page 1',
+	},
 };

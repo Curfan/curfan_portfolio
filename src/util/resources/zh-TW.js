@@ -8,4 +8,7 @@ export default {
 		text2: '',
 		press: '',
 	},
+	portfolio: {
+		page1: '第一張',
+	},
 };

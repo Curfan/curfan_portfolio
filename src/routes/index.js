@@ -3,7 +3,12 @@ import { Router } from 'react-router';
 import { hot } from 'react-hot-loader/root';
 import { Provider } from 'react-redux';
 
-import { isLanguageSupportWithRoute, languageMapRoute } from 'util/i18n';
+import {
+	isLanguageSupportWithRoute,
+	languageMapRoute,
+	routeMapLanguage,
+	changeLng,
+} from 'util/i18n';
 
 import App from 'layouts/App';
 
@@ -46,6 +51,12 @@ const createRoutes = store => ({
 
 				if (!isLanguageSupportWithRoute(urlLang)) {
 					replace(`/${languageMapRoute(lang)}/${pathname.split('/')[1]}`);
+				}
+
+				const newLang = routeMapLanguage(urlLang);
+
+				if (newLang !== lang) {
+					changeLng(newLang);
 				}
 
 				callback();

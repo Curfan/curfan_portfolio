@@ -7,6 +7,11 @@ import { changeLanguage } from 'models/i18n';
 import resources from './resources';
 import { getLanguageLocalStorage } from './storage';
 
+export const MAPPING_SWITCH_LANGUAGE = {
+	en: 'zh-TW',
+	'zh-TW': 'en',
+};
+
 const MAPPING_LANGUAGE = {
 	'zh-tw': 'zh-TW',
 	en: 'en',
@@ -14,7 +19,7 @@ const MAPPING_LANGUAGE = {
 
 export const LANGUAGE_OPTIONS = [
 	{
-		label: 'English',
+		label: 'EN',
 		value: 'en',
 	},
 	{
