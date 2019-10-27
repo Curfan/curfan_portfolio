@@ -214,3 +214,19 @@ export const useKeyPress = () => {
 
 	return keyPressed;
 };
+
+export const useMouseClick = () => {
+	const [mouseClicked, setMouseClicked] = useState(false);
+
+	const handleMousedown = () => {
+		setMouseClicked(true);
+	};
+
+	const handleMouseup = () => {
+		setMouseClicked(false);
+	};
+
+	useDom({ mousedown: handleMousedown, mouseup: handleMouseup });
+
+	return mouseClicked;
+};
