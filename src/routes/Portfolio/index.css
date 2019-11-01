@@ -1,3 +1,7 @@
 .portfolio {
 	display: flex;
 }
+
+.page-section {
+	padding: 120px 50px;
+}

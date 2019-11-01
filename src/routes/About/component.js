@@ -1,8 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import classnames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
-import { SectionsContainer, Section } from 'react-fullpage';
+import PageScrollContainer from 'components/organisms/PageScrollContainer';
 
 import Page from 'layouts/Page';
 
@@ -10,24 +11,20 @@ import styles from './index.css';
 
 const anchors = ['01', '02', '03'];
 
+const Section = ({ className, children }) => (
+	<div className={classnames(styles.pageSection, className)}>{children}</div>
+);
+
 const About = ({ className }) => {
-	const options = {
-		sectionClassName: 'section',
-		anchors,
-		scrollBar: false,
-		navigation: false,
-		verticalAlign: false,
-		sectionPaddingTop: '120px',
-		sectionPaddingBottom: '50px',
-	};
+	const { t } = useTranslation('about');
 
 	return (
 		<div className={classnames(styles.about, className)}>
-			<SectionsContainer className={styles.sectionContainer} {...options}>
-				<Section>About me</Section>
+			<PageScrollContainer anchors={anchors}>
+				<Section>{t('me')}</Section>
 				<Section>Curfan</Section>
 				<Section>Handsome man</Section>
-			</SectionsContainer>
+			</PageScrollContainer>
 		</div>
 	);
 };

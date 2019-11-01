@@ -3,7 +3,11 @@
 	"name": "react-starter",
 	"description": "25sprout web starter with React",
 	"version": "0.1.0",
-	"keywords": ["react", "25sprout", "starter"],
+	"keywords": [
+		"react",
+		"25sprout",
+		"starter"
+	],
 	"contributor": [
 		{
 			"name": "25sprout Front-End Team",
@@ -50,7 +54,6 @@
 		"query-string": "^5.1.1",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
-		"react-fullpage": "^0.1.19",
 		"react-i18next": "^10.13.1",
 		"react-lottie": "^1.2.3",
 		"react-redux": "^7.1.0",
@@ -174,12 +177,17 @@
 			"@storybook/react": "<rootDir>/storybook/__mocks__/facade.js",
 			"\\.jest-test-results.json$": "<rootDir>/storybook/__mocks__/file.js"
 		},
-		"coveragePathIgnorePatterns": ["<rootDir>/storybook/", "<rootDir>/node_modules/"]
+		"coveragePathIgnorePatterns": [
+			"<rootDir>/storybook/",
+			"<rootDir>/node_modules/"
+		]
 	},
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
 	},
-	"moduleRoots": ["src"]
+	"moduleRoots": [
+		"src"
+	]
 }
