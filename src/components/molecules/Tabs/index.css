@@ -1,0 +1,35 @@
+.tabs {
+	display: flex;
+	flex-direction: column;
+
+	& > .wrapper {
+		display: flex;
+
+		& > .tab {
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: 0.1em;
+			opacity: 0.3;
+			transition: opacity 0.3s ease-in;
+			cursor: pointer;
+
+			&.active {
+				opacity: 1;
+			}
+
+			&:not(:last-child) {
+				margin-right: 36px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	& > .active-bar {
+		margin-top: 8px;
+		border-bottom: 3px solid var(--standard);
+		transition: all 0.3s ease-in;
+	}
+}

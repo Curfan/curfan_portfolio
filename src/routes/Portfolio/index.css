@@ -4,4 +4,8 @@
 
 .page-section {
 	padding: 120px;
+
+	& > .tabs {
+		margin: 45px 0;
+	}
 }
