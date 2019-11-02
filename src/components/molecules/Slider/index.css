@@ -1,0 +1,9 @@
+.slider {
+	width: 100%;
+}
+
+.default-slide {
+	& > img {
+		width: 100%;
+	}
+}
