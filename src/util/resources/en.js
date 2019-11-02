@@ -11,4 +11,8 @@ export default {
 	portfolio: {
 		page1: 'Page 1',
 	},
+	portfolioSection02: {
+		title: 'Introduction',
+		text: 'text',
+	},
 };

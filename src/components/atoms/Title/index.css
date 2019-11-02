@@ -1,0 +1,15 @@
+.title {
+	font-size: 64px;
+	line-height: 78px;
+	letter-spacing: 0.05em;
+
+	&.subtitle {
+		font-size: 36px;
+		line-height: 44px;
+		letter-spacing: 0.05em;
+	}
+
+	& > .tail {
+		margin-left: 10px;
+	}
+}

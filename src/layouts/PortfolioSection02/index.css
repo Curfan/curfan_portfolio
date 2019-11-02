@@ -1,0 +1,26 @@
+.portfolio-section02 {
+	display: flex;
+
+	& > .info-wrapper {
+		width: 50%;
+
+		& > .title {
+			margin: 40px 0;
+		}
+
+		& > .text {
+			font-size: 18px;
+			line-height: 34px;
+			letter-spacing: 0.05em;
+		}
+	}
+
+	& > .image-wrapper {
+		position: relative;
+		width: 50%;
+
+		& > .image {
+			width: 100%;
+		}
+	}
+}

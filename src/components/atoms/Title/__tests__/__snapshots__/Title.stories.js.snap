@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`__interactive 1`] = `
+<DocumentFragment>
+  <div
+    class="title"
+  >
+    Title
+  </div>
+</DocumentFragment>
+`;
+
+exports[`subtitle 1`] = `
+<DocumentFragment>
+  <div
+    class="title subtitle"
+  >
+    Title
+  </div>
+</DocumentFragment>
+`;
+
+exports[`with tail 1`] = `
+<DocumentFragment>
+  <div
+    class="title subtitle"
+  >
+    Title
+    <test-file-stub
+      classname="tail"
+    />
+  </div>
+</DocumentFragment>
+`;
