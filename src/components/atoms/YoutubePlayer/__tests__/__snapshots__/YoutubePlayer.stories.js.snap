@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`__interactive 1`] = `
+<DocumentFragment>
+  <div
+    class="youtubePlayer"
+  >
+    <iframe
+      frameborder="0"
+      src="https://www.youtube.com/embed/FneT5meY6s4?modestbranding=1&autoplay=1&controls=0&fs=0&loop=1&rel=0&showinfo=0&disablekb=1&enablejsapi=1&mute=1&playlist=FneT5meY6s4"
+      title="FneT5meY6s4"
+    />
+  </div>
+</DocumentFragment>
+`;
