@@ -7,6 +7,7 @@ import PageSection from 'components/atoms/PageSection';
 import Tabs from 'components/molecules/Tabs';
 import Slider from 'components/molecules/Slider';
 import Card01 from 'components/molecules/Card01';
+import SocialMedia from 'components/molecules/SocialMedia';
 
 import worksData01 from 'util/data/works/ui&ux';
 import worksData02 from 'util/data/works/guidelinDesign';
@@ -63,6 +64,7 @@ const PortfolioSection01 = ({ className }) => {
 					},
 				}}
 			/>
+			<SocialMedia />
 		</PageSection>
 	);
 };

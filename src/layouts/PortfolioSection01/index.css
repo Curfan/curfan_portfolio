@@ -6,6 +6,7 @@
 	& > .slider {
 		opacity: 0;
 		transition: opacity 0.3s ease-in;
+		margin-bottom: 45px;
 
 		&.show {
 			opacity: 1;

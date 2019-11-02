@@ -1,0 +1,10 @@
+.social-media {
+	display: flex;
+	flex-wrap: wrap;
+
+	& > .link {
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+	}
+}

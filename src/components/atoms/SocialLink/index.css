@@ -1,0 +1,16 @@
+.social-link {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	background: #333b4e;
+	border-radius: 50%;
+	transition: background 0.3s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: white;
+	}
+}
