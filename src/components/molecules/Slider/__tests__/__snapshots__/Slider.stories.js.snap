@@ -3,58 +3,62 @@
 exports[`__interactive 1`] = `
 <DocumentFragment>
   <div
-    class="swiper-container swiper-container-initialized swiper-container-horizontal"
+    class="slider"
   >
     <div
-      class="swiper-wrapper"
-      style="-webkit-transition-duration: 0ms; -webkit-transform: translate3d(NaNpx, 0px, 0px);"
+      class="swiper-container swiper-container-initialized swiper-container-horizontal"
     >
       <div
-        class="defaultSlide swiper-slide"
+        class="swiper-wrapper"
+        style="-webkit-transition-duration: 0ms; -webkit-transform: translate3d(NaNpx, 0px, 0px);"
       >
-        <img
-          alt="slide"
-          src="https://fakeimg.pl/300/?text=01"
-        />
+        <div
+          class="defaultSlide swiper-slide"
+        >
+          <img
+            alt="slide"
+            src="https://fakeimg.pl/300/?text=01"
+          />
+        </div>
+        <div
+          class="defaultSlide swiper-slide"
+        >
+          <img
+            alt="slide"
+            src="https://fakeimg.pl/300/?text=02"
+          />
+        </div>
+        <div
+          class="defaultSlide swiper-slide"
+        >
+          <img
+            alt="slide"
+            src="https://fakeimg.pl/300/?text=03"
+          />
+        </div>
+        <div
+          class="defaultSlide swiper-slide"
+        >
+          <img
+            alt="slide"
+            src="https://fakeimg.pl/300/?text=04"
+          />
+        </div>
+        <div
+          class="defaultSlide swiper-slide"
+        >
+          <img
+            alt="slide"
+            src="https://fakeimg.pl/300/?text=05"
+          />
+        </div>
       </div>
-      <div
-        class="defaultSlide swiper-slide"
-      >
-        <img
-          alt="slide"
-          src="https://fakeimg.pl/300/?text=02"
-        />
-      </div>
-      <div
-        class="defaultSlide swiper-slide"
-      >
-        <img
-          alt="slide"
-          src="https://fakeimg.pl/300/?text=03"
-        />
-      </div>
-      <div
-        class="defaultSlide swiper-slide"
-      >
-        <img
-          alt="slide"
-          src="https://fakeimg.pl/300/?text=04"
-        />
-      </div>
-      <div
-        class="defaultSlide swiper-slide"
-      >
-        <img
-          alt="slide"
-          src="https://fakeimg.pl/300/?text=05"
-        />
-      </div>
+      <span
+        aria-atomic="true"
+        aria-live="assertive"
+        class="swiper-notification"
+      />
     </div>
-    <span
-      aria-atomic="true"
-      aria-live="assertive"
-      class="swiper-notification"
-    />
   </div>
 </DocumentFragment>
 `;
