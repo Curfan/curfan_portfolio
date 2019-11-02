@@ -1,6 +1,13 @@
 .card01 {
-	& > img {
-		width: 340px;
+	& > .image {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding-top: 100%;
+		background-size: cover;
+		background-position: center;
 	}
 
 	& > .title {

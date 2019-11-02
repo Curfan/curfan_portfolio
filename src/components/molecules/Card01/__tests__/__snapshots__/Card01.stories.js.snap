@@ -3,21 +3,25 @@
 exports[`__interactive 1`] = `
 <DocumentFragment>
   <div
-    class="card01"
+    style="max-width: 240px;"
   >
-    <img
-      alt="work"
-      src="https://fakeimg.pl/300/"
-    />
     <div
-      class="title"
+      class="card01"
     >
-      Product Name
-    </div>
-    <div
-      class="description"
-    >
-      Task
+      <div
+        class="image"
+        style="background-image: url(https://fakeimg.pl/300/);"
+      />
+      <div
+        class="title"
+      >
+        Product Name
+      </div>
+      <div
+        class="description"
+      >
+        Task
+      </div>
     </div>
   </div>
 </DocumentFragment>
