@@ -20,11 +20,23 @@ const Slider = React.forwardRef(
 			SlideComponent = DefaultSlideComponent,
 			slideProps,
 			config = {},
+			onChange = () => {},
 		},
 		ref,
 	) => {
 		const [swiper, updateSwiper] = useState(null);
+
 		const swiperConfig = { ...config };
+
+		useEffect(() => {
+			if (!swiper) {
+				return;
+			}
+
+			swiper.on('slideChange', () => {
+				onChange(swiper.realIndex);
+			});
+		}, [swiper]);
 
 		useEffect(() => {
 			if (swiper) {
@@ -35,7 +47,27 @@ const Slider = React.forwardRef(
 
 		useImperativeHandle(ref, () => ({
 			slideTo: props => {
-				swiper.slideTo(props);
+				if (swiper) {
+					swiper.slideTo(props);
+				}
+			},
+
+			slideToLoop: props => {
+				if (swiper) {
+					swiper.slideToLoop(props);
+				}
+			},
+
+			slideNext: props => {
+				if (swiper) {
+					swiper.slideNext(props);
+				}
+			},
+
+			slidePrev: props => {
+				if (swiper) {
+					swiper.slidePrev(props);
+				}
 			},
 		}));
 
@@ -50,34 +82,5 @@ const Slider = React.forwardRef(
 		);
 	},
 );
-
-// const Slider = ({
-// 	className,
-// 	slideStyle,
-// 	slides = [],
-// 	SlideComponent = DefaultSlideComponent,
-// 	slideProps,
-// 	config = {},
-// }) => {
-// 	const [swiper, updateSwiper] = useState(null);
-// 	const swiperConfig = { ...config };
-
-// 	useEffect(() => {
-// 		if (swiper) {
-// 			swiper.slideTo(0);
-// 			swiper.update();
-// 		}
-// 	}, [slides]);
-
-// 	return (
-// 		<div className={classnames(styles.slider, className)}>
-// 			<Swiper getSwiper={updateSwiper} {...swiperConfig}>
-// 				{slides.map(slide => (
-// 					<SlideComponent key={slide.id} className={slideStyle} {...slide} {...slideProps} />
-// 				))}
-// 			</Swiper>
-// 		</div>
-// 	);
-// };
 
 export default Slider;
