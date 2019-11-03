@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`__interactive 1`] = `
+<DocumentFragment>
+  <div
+    class="card02"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="imageWrapper"
+      >
+        <div
+          class="image"
+          style="background-image: url(https://fakeimg.pl/300/?text=PHOTO);"
+        />
+      </div>
+      <div
+        class="content"
+      >
+        <div
+          class="name"
+        >
+          Name
+        </div>
+        <div
+          class="title"
+        >
+          title
+        </div>
+        <div
+          class="description"
+        >
+          time
+        </div>
+        <div
+          class="notes"
+        >
+          <div
+            class="note"
+          >
+            notes...
+          </div>
+          <div
+            class="note"
+          >
+            notes...
+          </div>
+          <div
+            class="note"
+          >
+            notes...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

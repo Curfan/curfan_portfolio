@@ -1,0 +1,62 @@
+.card02 {
+	display: flex;
+	justify-content: center;
+
+	& > .wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 950px;
+
+		& > .image-wrapper {
+			width: 100%;
+			max-width: 330px;
+			margin-right: 24px;
+
+			& > .image {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				padding-top: 100%;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+
+		& > .content {
+			min-width: 400px;
+
+			& > .name {
+				font-size: 36px;
+				letter-spacing: 0.05em;
+				margin-bottom: 54px;
+			}
+
+			& > .title {
+				font-size: 18px;
+				line-height: 26px;
+				letter-spacing: 0.05em;
+				margin-bottom: 8px;
+			}
+
+			& > .time {
+				font-size: 18px;
+				line-height: 26px;
+				letter-spacing: 0.05em;
+			}
+
+			& > .notes {
+				margin-top: 80px;
+
+				& > .note {
+					font-size: 18px;
+					line-height: 26px;
+					letter-spacing: 0.05em;
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+}
