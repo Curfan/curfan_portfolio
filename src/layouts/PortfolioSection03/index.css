@@ -1,0 +1,34 @@
+.portfolio-section03 {
+	display: flex;
+
+	& > .process {
+		width: 30%;
+
+		& > .title {
+			margin-bottom: 24px;
+		}
+	}
+
+	& > .content {
+		width: 70%;
+		max-width: 620px;
+		opacity: 0;
+		transition: opacity 0.3s ease-in;
+
+		&.show {
+			opacity: 1;
+		}
+
+		& > .title {
+			margin-bottom: 24px;
+		}
+
+		& > .description {
+			margin-bottom: 24px;
+		}
+
+		& > img {
+			width: 100%;
+		}
+	}
+}

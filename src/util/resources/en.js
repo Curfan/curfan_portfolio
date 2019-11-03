@@ -15,4 +15,11 @@ export default {
 		title: 'Introduction',
 		text: 'text',
 	},
+	portfolioSection03: {
+		processTitle: 'What I do',
+		step1: 'Define',
+		step2: 'Design',
+		step3: 'Delivery',
+		step4: 'Validate',
+	},
 };

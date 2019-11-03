@@ -8,6 +8,7 @@ import PageScrollContainer from 'components/organisms/PageScrollContainer';
 import Page from 'layouts/Page';
 import PortfolioSection01 from 'layouts/PortfolioSection01';
 import PortfolioSection02 from 'layouts/PortfolioSection02';
+import PortfolioSection03 from 'layouts/PortfolioSection03';
 // import YoutubePlayer from 'components/atoms/YoutubePlayer';
 
 import styles from './index.css';
@@ -19,8 +20,8 @@ const Portfolio = ({ className }) => (
 		<PageScrollContainer anchors={anchors}>
 			<PortfolioSection01 />
 			<PortfolioSection02 />
+			<PortfolioSection03 />
 			{/* <YoutubePlayer youtubeId="FneT5meY6s4" title="FneT5meY6s4" /> */}
-			<PageSection>test 3</PageSection>
 			<PageSection>test 4</PageSection>
 		</PageScrollContainer>
 	</div>
