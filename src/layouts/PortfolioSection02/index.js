@@ -18,7 +18,7 @@ const PortfolioSection02 = ({ className }) => {
 				<Title className={styles.title} subtitle withTail>
 					{t('title')}
 				</Title>
-				<div className={styles.text}>{t('text')}</div>
+				<div className={styles.text} dangerouslySetInnerHTML={{ __html: t('text') }} />
 			</div>
 			<div className={styles.imageWrapper}>
 				<img className={styles.image} src={introduction} alt="" />
