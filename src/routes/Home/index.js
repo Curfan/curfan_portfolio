@@ -8,7 +8,6 @@ import { useLanguage } from 'models/i18n';
 import { useKeyPress } from 'util/event';
 
 import LottieLogo from 'components/atoms/LottieLogo';
-import Waves from 'components/atoms/Waves';
 
 import styles from './index.css';
 
@@ -78,7 +77,6 @@ const Home = () => {
 			<animated.div className={styles.hint} style={hintProps}>
 				{t('press')}
 			</animated.div>
-			<Waves className={styles.waves} />
 		</div>
 	);
 };
