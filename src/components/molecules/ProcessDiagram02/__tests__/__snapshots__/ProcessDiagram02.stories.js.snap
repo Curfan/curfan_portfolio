@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`__interactive 1`] = `
+<DocumentFragment>
+  <div
+    class="processDiagram02"
+  >
+    <div
+      class="step active"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker marker active"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Synergies
+      </div>
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Neobards
+      </div>
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Trend Mirco
+      </div>
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Dcard
+      </div>
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        T T S
+      </div>
+    </div>
+    <div
+      class="processLine"
+      style="background-image: url(test-file-stub);"
+    />
+  </div>
+</DocumentFragment>
+`;
