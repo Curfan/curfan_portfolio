@@ -1,0 +1,29 @@
+.portfolio-section-04 {
+	padding: 120px 30px;
+
+	& > .slider-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px 0 40px;
+
+		& > .slider {
+			width: calc(100% - 148px);
+		}
+
+		& > .navigator {
+			display: flex;
+			width: 50px;
+			flex-shrink: 0;
+			cursor: pointer;
+
+			&.right {
+				margin-left: 24px;
+			}
+
+			&.left {
+				margin-right: 24px;
+			}
+		}
+	}
+}

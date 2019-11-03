@@ -2,13 +2,13 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import classnames from 'classnames';
 
-import PageSection from 'components/atoms/PageSection';
 import PageScrollContainer from 'components/organisms/PageScrollContainer';
 
 import Page from 'layouts/Page';
 import PortfolioSection01 from 'layouts/PortfolioSection01';
 import PortfolioSection02 from 'layouts/PortfolioSection02';
 import PortfolioSection03 from 'layouts/PortfolioSection03';
+import PortfolioSection04 from 'layouts/PortfolioSection04';
 // import YoutubePlayer from 'components/atoms/YoutubePlayer';
 
 import styles from './index.css';
@@ -21,8 +21,8 @@ const Portfolio = ({ className }) => (
 			<PortfolioSection01 />
 			<PortfolioSection02 />
 			<PortfolioSection03 />
+			<PortfolioSection04 />
 			{/* <YoutubePlayer youtubeId="FneT5meY6s4" title="FneT5meY6s4" /> */}
-			<PageSection>test 4</PageSection>
 		</PageScrollContainer>
 	</div>
 );
