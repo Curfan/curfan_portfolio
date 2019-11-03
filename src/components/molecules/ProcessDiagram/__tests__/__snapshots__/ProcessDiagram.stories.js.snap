@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`__interactive 1`] = `
+<DocumentFragment>
+  <div
+    class="processDiagram"
+  >
+    <div
+      class="step active"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker active"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Define
+      </div>
+    </div>
+    <div
+      class="processLine processLine"
+    >
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Design
+      </div>
+    </div>
+    <div
+      class="processLine processLine"
+    >
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Delivery
+      </div>
+    </div>
+    <div
+      class="processLine processLine"
+    >
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+      <span
+        class="dash"
+      />
+    </div>
+    <div
+      class="step"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="marker"
+      >
+        <span />
+      </div>
+      <div
+        class="label"
+      >
+        Validate
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

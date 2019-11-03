@@ -1,0 +1,28 @@
+.marker {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 3px;
+	border-color: rgba(255, 255, 255, 0.17);
+	transition: border-color 0.3s ease-in;
+
+	& > span {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: transparent;
+		transition: background 0.3s ease-in;
+	}
+
+	&.active {
+		border-color: var(--standard);
+
+		& > span {
+			background: var(--standard);
+		}
+	}
+}

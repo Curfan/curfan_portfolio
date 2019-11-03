@@ -1,0 +1,23 @@
+.process-diagram {
+	& > .step {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		& > .label {
+			margin-left: 25px;
+			color: rgba(255, 255, 255, 0.12);
+			transition: color 0.3s ease-in;
+		}
+
+		&.active {
+			& > .label {
+				color: white;
+			}
+		}
+	}
+
+	& > .process-line {
+		padding: 16px;
+	}
+}
