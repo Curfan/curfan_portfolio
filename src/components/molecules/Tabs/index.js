@@ -12,7 +12,7 @@ const Tabs = ({ className, tabs = [], onTabChange = () => {} }) => {
 	useEffect(() => {
 		const { x: baseX } = refWrapper.current.children[0].getBoundingClientRect();
 		const { width, x } = refWrapper.current.children[activeIndex].getBoundingClientRect();
-		onTabChange(tabs[activeIndex]);
+		onTabChange(activeIndex);
 		setActiveBarWidth(width);
 		setActiveTabOffset(x - baseX);
 	}, [activeIndex]);

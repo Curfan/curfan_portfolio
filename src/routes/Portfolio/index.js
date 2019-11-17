@@ -1,4 +1,7 @@
-export default () => ({
+import { getWorks } from 'models/works';
+import { getExperience } from 'models/experience';
+
+export default store => ({
 	path: 'portfolio',
 	indexRoute: {
 		getComponent: (nextState, cb) =>
@@ -10,5 +13,9 @@ export default () => ({
 				},
 				'Portfolio',
 			),
+		onEnter: () => {
+			store.dispatch(getWorks());
+			store.dispatch(getExperience());
+		},
 	},
 });

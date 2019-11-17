@@ -1,4 +1,7 @@
 import queryString from 'query-string';
+import i18n from 'i18next';
+
+import firebase from 'util/firebase';
 
 const { API_ENDPOINT } = process.env;
 
@@ -23,4 +26,13 @@ export const wrapFetch = async (url, options = { headers: {} }, params = {}) => 
 	const result = await fetch(URL, { ...options, headers });
 
 	return result.json();
+};
+
+export const wrapFirebaseRef = async url => {
+	const result = await firebase
+		.database()
+		.ref(`${i18n.language}/${url}`)
+		.once('value');
+
+	return result.val();
 };
