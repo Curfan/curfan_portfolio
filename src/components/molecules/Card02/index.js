@@ -20,7 +20,9 @@ const Card02 = ({ className, photo, name, title, time, notes = [] }) => (
 				<div className={styles.description}>{time}</div>
 				<div className={styles.notes}>
 					{notes.map(note => (
-						<div className={styles.note}>{note}</div>
+						<div key={note} className={styles.note}>
+							{note}
+						</div>
 					))}
 				</div>
 			</div>
